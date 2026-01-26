@@ -1,10 +1,9 @@
 
-s = false
-p = true
 
 class Player {
 
 }
+rooms = []
 
 
 
@@ -19,7 +18,5 @@ function draw() {
 }
 
 function loadRoom() {
-  if (s === false || p === false) {
-    print("nigga")
-  }
+ 
 }
