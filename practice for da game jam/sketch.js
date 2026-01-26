@@ -3,8 +3,7 @@
 class Player {
 
 }
-rooms = []
-
+rooms = fetch(roomData.txt)
 
 
 
