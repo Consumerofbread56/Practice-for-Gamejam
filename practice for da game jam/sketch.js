@@ -5,6 +5,7 @@ class Player {
 }
 
 let roomData;
+let array = [];
 
 fetch('https://raw.githubusercontent.com/Consumerofbread56/Practice-for-Gamejam/refs/heads/main/practice%20for%20da%20game%20jam/roomData.txt')
     .then(response => {
@@ -23,6 +24,7 @@ fetch('https://raw.githubusercontent.com/Consumerofbread56/Practice-for-Gamejam/
     console.log("There was a separate error or sm idk");
   })
 
+  roomData = roomData.split('\n');
 
 
  
