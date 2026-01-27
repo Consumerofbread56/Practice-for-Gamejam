@@ -4,25 +4,38 @@ class Player {
 
 }
 
+roomVals = getRoomData();
 
+async function getRoomData() {
+  try {
+    const response = fetch('https://raw.githubusercontent.com/Consumerofbread56/Practice-for-Gamejam/refs/heads/main/practice%20for%20da%20game%20jam/roomData.txt')
+    if (!response.ok) {
+      console.log("There was an error with fetching room data.");
+    }
+  
+    console.log(response.text());
+    const ROOMDATA = await response.text();
+    return ROOMDATA;
 
-const ROOMDATA = fetch('https://github.com/Consumerofbread56/Practice-for-Gamejam/blob/b14ad7c8ea6cba92fe3527f17b046e07379807e5/practice%20for%20da%20game%20jam/roomData.txt')
-
-.then((response) => {
-  if (!response.ok) {
-    console.log("There was an error with fetching room data.");
+  } catch (error) {
+    console.log("There was a separate error or sm idk");
   }
-  console.log(response);
-   return response.text();
-   
-  })
+    
+}
+
+
+
+
+
+
+
  
 
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
+  console.log(roomVals);
 }
 
 function draw() {
