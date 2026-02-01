@@ -23,7 +23,7 @@ let heightOfScreen;
     .then(data => {
       roomData = data;
       roomData = roomData.split("|");
-      console.log(roomData);
+      
       decompileRoomData();
     })
 
@@ -73,6 +73,7 @@ function loadRoom() {
 }
 
 function decompileRoomData(){
+  console.log(roomData);
   let newRooms = [];
   let newChar;
   
